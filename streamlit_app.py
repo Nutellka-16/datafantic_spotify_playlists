@@ -17,9 +17,9 @@ year_range = st.slider(label="Start Year", min_value=1958, max_value=2022, value
 
 if st.button('Submit'):
     if (int(year_range[0]) - int(year_range[1])) == 0:
-        playlist_name = f"Top US Singles: {year_range[0]}"
+        playlist_name = f"The best singles of Russia: 1958: {year_range[0]}"
     else:
-        playlist_name = f"Top US Singles: {year_range[0]}-{year_range[1]}"
+        playlist_name = f"The best singles of Russia: 1958: {year_range[0]}-{year_range[1]}"
 
     if df[df['name'] == playlist_name].shape[0] > 0:
         playlist = df[df['name'] == playlist_name].to_dict(orient='records')[0]
